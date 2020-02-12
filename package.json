@@ -1,0 +1,37 @@
+{
+	"name": "workout_tracker",
+	"version": "1.0.0",
+	"description": "For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/TriNguyenClassroom/monash-bootcamp-week-17-cynwong.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/TriNguyenClassroom/monash-bootcamp-week-17-cynwong/issues"
+	},
+	"homepage": "https://github.com/TriNguyenClassroom/monash-bootcamp-week-17-cynwong#readme",
+	"dependencies": {
+		"bcrypt": "^3.0.8",
+		"dotenv": "^8.2.0",
+		"ejs": "^3.0.1",
+		"express": "^4.17.1",
+		"mongoose": "^5.8.11",
+		"morgan": "^1.9.1",
+		"passport": "^0.4.1"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.2",
+		"@types/node": "^13.7.1",
+		"eslint": "^6.8.0",
+		"nodemon": "^2.0.2",
+		"ts-node": "^8.6.2",
+		"typescript": "^3.7.5"
+	}
+}
