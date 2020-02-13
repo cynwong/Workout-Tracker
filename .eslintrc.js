@@ -33,6 +33,7 @@ module.exports = {
 				"tsx": "never"
 			}
 		],
+		'import/no-unresolved': [2, { 'ignore': ['\.ts'],
 		"indent": [2, "tab"],
 		'linebreak-style': ['off', 'unix'],
 		'no-console': ['error', { 'allow': ['warn', 'error'] }],
