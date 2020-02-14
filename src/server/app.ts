@@ -2,11 +2,11 @@
 import * as express from 'express';
 import * as path from 'path';
 
-import * as apiRoutes from './routes/api';
+import { apiRoutes } from './routes/api';
 
 const app:express.Application = express();
 
-// Middlewares
+// Middle-wares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
