@@ -52,5 +52,5 @@ export interface iWorkout extends Document {
 	totalDuration: number,
 };
 
-export const Workout: Model<iWorkout> = model<iWorkout>('Workout', workoutSchema);
+export const WorkOut: Model<iWorkout> = model<iWorkout>('Workout', workoutSchema);
 
