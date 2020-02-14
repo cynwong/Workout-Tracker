@@ -1,5 +1,5 @@
-import * as Workout from './workout';
+import * as  Workout from './workout';
 
-export default {
+export {
 	Workout,
 };
