@@ -1,6 +1,6 @@
-import { iWorkout,WorkOut } from './workout';
+import { iWorkout,Workout } from './workout';
 
 export {
 	iWorkout,
-	WorkOut,
+	Workout,
 };
