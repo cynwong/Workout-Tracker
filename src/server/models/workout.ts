@@ -42,8 +42,9 @@ const workoutSchema:Schema = new Schema(
 	},
 );
 
-workoutSchema.virtual('totalDuration').get(
-	() => this.exercises.reduce((total, exercise) => total + exercise.duration, 0),
+workoutSchema.virtual('totalDuration').get(function () {
+		return this.exercises.reduce((total, exercise) => total + exercise.duration, 0); 
+	},
 );
 
 export interface iWorkout extends Document {
@@ -52,5 +53,5 @@ export interface iWorkout extends Document {
 	totalDuration: number,
 };
 
-export const WorkOut: Model<iWorkout> = model<iWorkout>('Workout', workoutSchema);
+export const Workout: Model<iWorkout> = model<iWorkout>('Workout', workoutSchema);
 
