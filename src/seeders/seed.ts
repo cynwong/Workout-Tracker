@@ -1,4 +1,4 @@
-import  {Workout} from '../models/workout';
+import  { WorkOut } from '../server/models';
 
 import connect from '../connect';
 
@@ -136,9 +136,9 @@ const workoutSeeds = [
 	try {
 		await connect();
 		console.info('Clearing the collection...');
-		await Workout.deleteMany({});
+		await WorkOut.deleteMany({});
 		console.info("Inserting seeds to collections..");
-		const data = await Workout.insertMany(workoutSeeds);
+		const data = await WorkOut.insertMany(workoutSeeds);
 		console.info(data.length + ' records inserted!');
 		process.exit(0);
 	} catch (err) {
