@@ -33,7 +33,11 @@ app.get('/exercise', (_req:express.Request, res: express.Response) => {
 	res.render('exercise');
 });
 
-app.use('/api', apiRoutes);
+app.get('/stats', (_req:express.Request, res: express.Response) => {
+	res.render('stats');
+});
+
+app.use('/api/workouts', apiRoutes);
 
 app.use("*", (_req:express.Request, res: express.Response) => {
 	res.redirect('/');

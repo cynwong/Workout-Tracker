@@ -13,7 +13,7 @@ const errorResponse = (res:Response, err) =>{
 	});
 }
 
-router.get('/workouts/last', async (_req: Request, res: Response) => {
+router.get('/last', async (_req: Request, res: Response) => {
 	try {
 		const result = await Workout.find({}).sort({_id: -1}).limit(1);
 		return res.json(result);
@@ -22,7 +22,17 @@ router.get('/workouts/last', async (_req: Request, res: Response) => {
 	}
 });
 
-router.put('/workouts/:id', async (req: Request, res: Response) => {
+
+router.get('/range', async (_req: Request, res: Response) => {
+	try {
+		const result = await Workout.find({});
+		return res.json(result);
+	} catch (error) {
+		errorResponse(res,error);
+	}
+});
+
+router.put('/:id', async (req: Request, res: Response) => {
 	try {
 		const { 
 			params: { id },
@@ -39,5 +49,7 @@ router.put('/workouts/:id', async (req: Request, res: Response) => {
 		errorResponse(res,err);
 	}
 });
+
+
 
 export const apiRoutes = router;
