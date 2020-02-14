@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose';
+import { Document, model, Model, Schema } from 'mongoose';
 
 const workoutSchema:Schema = new Schema(
 	{
@@ -46,4 +46,11 @@ workoutSchema.virtual('totalDuration').get(
 	() => this.exercises.reduce((total, exercise) => total + exercise.duration, 0),
 );
 
-export default model('Workout', workoutSchema);
+export interface iWorkout extends Document {
+	day: Date,
+	exercises: object[],
+	totalDuration: number,
+};
+
+export const Workout: Model<iWorkout> = model<iWorkout>('Workout', workoutSchema);
+
