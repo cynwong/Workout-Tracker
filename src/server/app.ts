@@ -1,5 +1,5 @@
 
-import * as express from 'express';
+import express from 'express';
 import * as path from 'path';
 
 import { apiRoutes } from './routes/api';
@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(
 	(
 		req: express.Request,
-		res: express.Response,
+		_res: express.Response,
 		next: express.NextFunction
 	) => {
 		console.info(`${req.method} ${req.path}`);

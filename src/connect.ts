@@ -13,7 +13,7 @@ export default( async () => {
 		DB_CONNECTION_URI: db,
 	} = process.env;
 	console.info(`Using '${nodeEnv}' environment..`)
-	const connectURI = nodeEnv === 'development' ? localDB : db;
+	const connectURI:any = nodeEnv === 'development' ? localDB : db;
 	const connect = async () => {
 		try {
 			await mongoose.connect(
