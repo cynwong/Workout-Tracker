@@ -161,8 +161,8 @@ var workoutSeeds = [
         day: new Date().setDate(new Date().getDate() - 1),
         exercises: [
             {
-                type: 'resistance',
-                name: 'Bench',
+                type: 'cardio',
+                name: 'Walk',
                 duration: 30,
                 distance: 2
             },

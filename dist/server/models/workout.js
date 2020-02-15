@@ -28,6 +28,9 @@ var workoutSchema = new mongoose_1.Schema({
             reps: {
                 type: Number,
             },
+            sets: {
+                type: Number,
+            },
             distance: {
                 type: Number,
             },
@@ -42,5 +45,6 @@ var workoutSchema = new mongoose_1.Schema({
 workoutSchema.virtual('totalDuration').get(function () {
     return this.exercises.reduce(function (total, exercise) { return total + exercise.duration; }, 0);
 });
+;
 ;
 exports.Workout = mongoose_1.model('Workout', workoutSchema);
