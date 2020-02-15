@@ -28,6 +28,9 @@ const workoutSchema:Schema = new Schema(
 				reps: {
 					type: Number,
 				},
+				sets: {
+					type: Number,
+				},
 				distance: {
 					type: Number,
 				},
@@ -47,9 +50,19 @@ workoutSchema.virtual('totalDuration').get(function (this:iWorkout) {
 	},
 );
 
+interface exercise {
+	type: string,
+	name: string,
+	duration:number,
+	weight: number,
+	reps: number,
+	sets: number,
+	distance:number,
+};
+
 export interface iWorkout extends Document {
 	day: Date,
-	exercises: object[],
+	exercises: exercise[],
 	totalDuration: number,
 };
 
