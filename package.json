@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"seed": "ts-node src/seeders/seed.ts",
-		"start": "node build/",
+		"start": "node dist/",
 		"test": "npm run lint",
 		"watch": "nodemon -x ts-node src/"
 	},
