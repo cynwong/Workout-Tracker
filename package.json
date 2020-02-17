@@ -5,10 +5,10 @@
 	"main": "index.js",
 	"scripts": {
 		"dev:seed": "ts-node src/seeders/seed.ts",
-		"seed": "node dist/seeders/seed.js",
 		"start": "ts-node src/index.ts",
+		"remote:seed": "ts-node src/seeders/seed.ts --env=production",
 		"test": "npm run lint",
-		"watch": "nodemon -x ts-node src/"
+		"watch": "nodemon"
 	},
 	"repository": {
 		"type": "git",
