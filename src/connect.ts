@@ -10,7 +10,7 @@ export default( async () => {
 	const {
 		NODE_ENV: nodeEnv,
 		LOCAL_DB_CONNECTION_URI: localDB,
-		DB_CONNECTION_URI: db,
+		MONGODB_URI: db,
 	} = process.env;
 	console.info(`Using '${nodeEnv}' environment..`)
 	const connectURI:any = nodeEnv === 'development' ? localDB : db;
