@@ -1,6 +1,6 @@
 # Workout Tracker
 
-Workout Tracker is an application where user can log their workout schedule. [visit site](https://workout-tracker-cw.herokuapp.com)
+Workout Tracker is an application where users can log their workout schedule. [visit site](https://workout-tracker-cw.herokuapp.com)
 
 ## User Story
 
